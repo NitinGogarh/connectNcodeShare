@@ -1,0 +1,525 @@
+.homePageWrapper {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  width: 100vw;
+}
+.formWrapper {
+  background: #282a36;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 400px;
+  max-width: 90%;
+}
+footer {
+  position: fixed;
+  bottom: 5px;
+}
+footer a {
+  color: #4aee88;
+  text-decoration: none;
+}
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+}
+.mainLabel {
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+.homePageLogo {
+  text-align: center;
+  font-size: 35px;
+  color: #4aee88;
+  margin-bottom: 40px;
+}
+.inputBox {
+  padding: 10px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  margin-bottom: 14px;
+  background-color: #eee;
+  font-size: 16px;
+  font-weight: bold;
+}
+.btn {
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  font-weight: bold;
+}
+.joinBtn,
+.leaveBtn,.runBtn {
+  background: #4aee88;
+  width: 100px;
+  margin-left: auto;
+  &:hover {
+    background-color: #2b824c;
+  }
+}
+.createInfo {
+  margin-top: 20px;
+  text-align: center;
+}
+.createNewBtn {
+  color: #4aee88;
+  text-decoration: none;
+}
+.mainWrap {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  max-width: 100vw;
+  overflow: hidden;
+}
+.aside {
+  overflow: hidden;
+  background: #1c1e29;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+   width: 15%;
+   padding: 11px;
+  position: relative;
+}
+.arrowBtn{
+  
+  width: 20px;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+   color: #eee;
+  align-items: center;
+  cursor: pointer;
+}
+.asideInner {
+  flex: 1;
+}
+.clientList {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 10px;
+}
+.client {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-weight: bold;
+}
+.userName {
+  margin-top: 10px;
+}
+.logo {
+  border-bottom: 1px solid #424242;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+.logoImage {
+  color: #4aee88;
+}
+.editorWrap {
+  background-color: #fff;
+  width: 100%;
+  overflow: hidden;
+}
+.copyBtn{
+  margin-bottom: 20px;
+}
+.leaveBtn {
+
+  width: 100%;
+}
+.editorBack {
+  background-color: #282a36;
+  color: #fff;
+  height: 50px;
+}
+.selector {
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    outline: none;
+    width: fit-content;
+    padding: 9px 18px;
+    margin: 9px 10px 0px auto;
+    background-color: #1c1e29;
+    color: #fff;
+    margin-left: 10px;
+}
+.options{
+    font-weight: bold;
+    padding: 3px;
+    border: none;
+    outline: none;
+}
+.editorMainWrap {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  margin: 0%;
+  background-color: #282a36;
+  width: 100%;
+}
+.writeCode {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  margin: 0%;
+  
+}
+.codeEditor {
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+   width: 100%;
+   overflow: hidden;
+}
+.dragger{
+  box-sizing: border-box;
+  height: 100%;
+  display: flex;
+  background-color: #282a36;
+  color: #eee;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+ 
+  color:  rgb(175, 171, 171);
+   z-index: 99;
+  max-width: 11px;
+  padding-inline: 11px;
+  border-radius: 4px;
+}
+
+.runCode {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  margin: 0%;
+  height: 100%;
+   width: 40%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  background-color: #1c1e29;
+
+ 
+}
+.inputOutput{
+   flex:1;
+   display: flex;
+   flex-direction: column;
+   margin: 3px 0px 0px 0px;
+   min-width: 25vw;
+   
+}
+.inputWrap{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+}
+.runCode h3{
+    color: rgb(175, 171, 171);
+    margin: 2px;
+    padding: 2px;
+   
+}
+.inputH3{
+  position: absolute;
+  top: 40%;
+  left: 45%;
+  opacity: 0.5;
+}
+.inputBox{
+    background-color: #1a1a1b;
+   flex:1;
+    resize: none;
+    color: #575656;
+}
+.outputWrap{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+}
+.outputH3{
+  position: absolute;
+  top: 40%;
+  left: 45%;
+  opacity: 0.5;
+}
+.outputBox {
+   
+    background-color: #1a1a1b;
+    flex:1;
+     color: #faf2f2;
+     padding: 16px;
+
+}
+.runBtn{
+  
+    width: fit-content;
+    padding: 9px 18px;
+    margin: 9px 10px 0px auto;
+    background-color: #4aee88;
+    color: black;
+    min-width:  120px;
+    
+}
+.chatIcon{
+ width: 100vw;
+ height: 100vh;
+ z-index: 999;
+}
+
+.chatWindowBox{
+  box-sizing: border-box;
+  width: 22%;
+  height: 70vh;
+  background-color: #eee;
+  border-radius: 12px;
+ z-index: 999;
+  overflow: hidden;
+  min-width: 300px;
+}
+.chatWindow{
+  height: 100%;
+  margin: 0%;
+  padding: 0%;
+  overflow-y: auto;
+  
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.cross {
+  width: 100%;
+  color: red;
+  font-weight: bold;
+  font-size: 40px;
+  position: sticky;
+  top: 0;
+  height: 20px;
+  z-index: 33;
+  background: #fff;
+}
+
+.crossIcon {
+  display: block;
+  cursor: pointer;
+  position: absolute; /* Use absolute positioning here */
+  right: 0;
+  top: 0;
+  width: fit-content;
+}
+
+.cursor {
+  display: block;
+  position: absolute; /* Use absolute positioning here */
+  left: calc(50% - 65px);
+  height: 5px;
+  width: 130px;
+  background-color: #1c1e29;
+  z-index: 999;
+  border-radius: 6px;
+  top: 1px;
+  cursor: pointer;
+}
+
+.msgListCont{
+  max-width: 100%;
+  min-height: calc(100% - 103px);
+  overflow: hidden;
+}
+.message-list{
+ width: 100%;
+  overflow: hidden;
+
+}
+.startMsg{
+    box-sizing: border-box;
+    
+    background: #fff;
+    border-radius: 5px;
+    border-top-left-radius: 0;
+    box-shadow: 1px 1px 1px 1px #0003;
+    margin: 3px 5px 10px 20px;
+    padding: 6px 9px 8px;
+    text-align: center;
+    max-height: 30px;
+}
+ 
+
+ .inputBox2 {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  background-color: #eee; 
+  text-align: center;
+  position: sticky;
+  bottom: 0px;
+  height: 35px;
+  display: flex; /* Use flexbox to align items */
+}
+
+.inputField {
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  outline: none;
+  margin: 0;
+  border: 2px solid #2b824c;
+  border-right: none;
+  color: white;
+  border-radius: 10px 0 0 10px;
+  background-color: #282a36;
+  width: 73%;
+  height: 100%;
+  padding: 0;
+  font-size: 16px;
+}
+
+.sendBtn {
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  width: 23%;
+  margin: 0;
+  height: 100%;
+  background-color: #4aee88;
+  color: black;
+  border-radius: 0 10px 10px 0;
+  border: 2px solid #2b824c;
+  border-left: none;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 0; /* Set padding to 0 to ensure the height is consistent */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (min-width: 900px) {
+  .aside{
+    width: 15%;
+    padding: 11px;
+  }
+} 
+@media screen and (max-width: 1300px) {
+  .chatWindowBox{
+    width: 25%;
+    height: 70vh;
+    
+  }
+}
+@media screen and (max-width: 1100px) {
+  .chatWindowBox{
+    width: 28%;
+    height: 70vh;
+  }
+}
+@media screen and (max-width: 900px) {
+   .writeCode{
+    width: 50%;
+   }
+   .runCode{
+    width: 50%;
+   }
+   .chatWindowBox{
+    width: 34%;
+    height: 70vh;
+  }
+} 
+@media screen and (max-width: 800px) {
+  .runCode{
+   width: 60%;
+  }
+  .chatWindowBox{
+    width: 37%;
+    height: 70vh;
+  }
+  .aside{
+    width: 0;
+    padding: 0;
+    
+  }
+} 
+@media screen and (max-width: 700px) {
+  .runCode{
+   width: 0%;
+  }
+  .writeCode
+  {
+    width: calc(100% - 22px);
+  }
+  .aside{
+    width: 0;
+    padding: 0;
+   
+  }
+  .chatWindowBox{
+    width: 42%;
+    height: 70vh;
+  }
+} 
+@media screen and (max-width: 600px) {
+  .chatWindowBox{
+    width: 52%;
+    height: 70vh;
+  }
+  .aside{
+    width: 0;
+    padding: 0;
+   
+  }
+} 
+@media screen and (max-width: 500px) {
+  .chatWindowBox{
+    width: 62%;
+    height: 70vh;
+  }
+  .aside{
+    width: 0;
+    padding: 0;
+   
+  }
+} 
+@media screen and (max-width: 400px) {
+  .chatWindowBox{
+    width: 67%;
+    height: 70vh;
+  }
+  .aside{
+    width: 0;
+    padding: 0;
+   
+  }
+} 
+@media screen and (max-width: 300px) {
+  .chatWindowBox{
+    width: 82%;
+    height: 70vh;
+  }
+  .aside{
+    width: 0;
+    padding: 0;
+   
+  }
+} 
