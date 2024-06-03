@@ -3,7 +3,7 @@ import express from "express";
 import http from "http";
 import { Server } from "socket.io";
 import { ACTIONS } from "./Action";
-
+import cors from 'cors';
 type Imap = {
   [key:string]:string
 }
@@ -12,6 +12,12 @@ type Imap = {
 
 
 const app = express();
+
+
+app.use(cors({
+  origin: "*",
+  methods: ["GET", "POST"]
+}));
 const server = http.createServer(app);
 config();
 const io = new Server(server, {
