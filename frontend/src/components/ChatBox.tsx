@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import ModeCommentIcon from "@mui/icons-material/ModeComment"; // The default
 import ChatWindow from "./ChatWindow";
 import { Socket } from "socket.io-client";
+import { MessageType } from "react-chat-elements";
 type Tprops = {
     socketRef: React.MutableRefObject<Socket | undefined>;
     RoomId:string|undefined,
@@ -14,7 +15,7 @@ const ChatBox:React.FC<Tprops> = ({socketRef,RoomId,userName}) => {
   const [display, setDisplay] = useState(false);
   const [coordinate, setCoordinate] = useState({ left: 0, top: 0});
   const position = useRef(null);
-  const [messages,setMessages] = useState<any>([])
+  const [messages,setMessages] = useState<MessageType[]>([])
   useEffect(() => {
     // Function to update the body height
     const updateBodyHeight = () => {
