@@ -7,20 +7,14 @@ type Tprops = {
     RoomId:string|undefined,
     userName:string
 }
-type IdataSource = {
-  position: string;
-  type: string;
-  title: string;
-  text: string;
 
-};
 const ChatBox:React.FC<Tprops> = ({socketRef,RoomId,userName}) => {
   const [bodyWidth, setBodyWidth] = useState<number>(0);
   const [bodyHeight, setBodyHeight] = useState<number>(0);
   const [display, setDisplay] = useState(false);
   const [coordinate, setCoordinate] = useState({ left: 0, top: 0});
   const position = useRef(null);
-  const [messages,setMessages] = useState<IdataSource[]>([])
+  const [messages,setMessages] = useState<any>([])
   useEffect(() => {
     // Function to update the body height
     const updateBodyHeight = () => {

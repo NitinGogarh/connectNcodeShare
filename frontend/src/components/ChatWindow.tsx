@@ -5,13 +5,7 @@ import SendIcon from '@mui/icons-material/Send';
 import { useEffect, useRef, useState } from "react";
 import { Socket } from "socket.io-client";
 import {ACTIONS} from './Action'
-type IdataSource = {
-  position: string;
-  type: string;
-  title: string;
-  text: string;
 
-};
 type Iprops = {
   bodyWidth: number;
   setDisplay: (x: boolean) => void;
@@ -21,8 +15,8 @@ type Iprops = {
   socketRef: React.MutableRefObject<Socket | undefined>;
   RoomId:string|undefined,
   userName:string,
-  messages:IdataSource[],
-  setMessages:React.Dispatch<React.SetStateAction<IdataSource[]>>
+  messages:any,
+  setMessages:React.Dispatch<React.SetStateAction<any>>
 };
 interface IMsgData{
     msg:string,
