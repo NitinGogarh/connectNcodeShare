@@ -23,7 +23,7 @@ return {
 return []
 }
 app.get('/',(req,res)=>{
-  res.write("Server is running fine")
+  res.send("Server is running fine")
 })
 io.on('connection',(socket)=>{ 
   
