@@ -7,10 +7,26 @@ import { ACTIONS } from "./Action";
 type Imap = {
   [key:string]:string
 }
+
+
+
+
 const app = express();
 const server = http.createServer(app);
 config();
-const io = new Server(server);
+const io = new Server(server, {
+  cors: {
+    origin: "*",
+    methods: ["GET", "POST"]
+  }
+});
+
+
+
+
+
+
+
 const userSocketMap:Imap = {}
 const getAllConnectedClients = (roomId:string)=>{
   const room  = io.sockets.adapter.rooms.get(roomId)
@@ -22,9 +38,17 @@ return {
 }})
 return []
 }
+
+
+
+
+
 app.get('/',(req,res)=>{
   res.send("Server is running fine")
 })
+
+
+
 io.on('connection',(socket)=>{ 
   
     socket.on(ACTIONS.JOIN,({roomId,userName})=>{
