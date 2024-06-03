@@ -5,9 +5,7 @@
    ],
    "routes": [
      { "src": "/(.*)", "dest": "/server.ts" }
-   ],
-   "rewrites": [
-     { "source": "/(.*)", "destination": "/server.ts" }
    ]
+   
  }
  
