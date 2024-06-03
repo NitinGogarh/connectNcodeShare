@@ -150,7 +150,7 @@ const EditorPage = () => {
   },[])
   const handleCopyUrl = async ()=>{
     try {
-      if (params.roomId) await navigator.clipboard.writeText(`http://localhost:5173/${params?.roomId}`);
+      if (params.roomId) await navigator.clipboard.writeText(`https://codeshare-connect.vercel.app/${params?.roomId}`);
       toast.success("Url Copied to your clipboard");
     } catch (error) {
       toast.error("Error Occured:Couldn't copied");
