@@ -1,11 +1,13 @@
 import { io, Socket } from "socket.io-client";
-const REACT_BACKEND_URL = "https://connect-n-code.vercel.app/"
+
+const REACT_BACKEND_URL = "wss://connect-n-code.vercel.app/";
+
 export const initSocket = async():Promise<Socket>=>{
     const options = {
         'force new connection':true,
         timeout:10000,
         transports:['websocket'],
-        reconnectionAttemp:'infinity'
+        reconnectionAttemps:'infinity'
     }
-    return await io(REACT_BACKEND_URL,options)
-}
+    return  io(REACT_BACKEND_URL,options)
+} 
