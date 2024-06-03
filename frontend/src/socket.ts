@@ -1,6 +1,6 @@
 import { io, Socket } from "socket.io-client";
 
-const REACT_BACKEND_URL = "https://connect-n-code.vercel.app/";
+const REACT_BACKEND_URL = "https://connectncodeshare-production.up.railway.app/";
 
 export const initSocket = async (): Promise<Socket> => {
   const options = {

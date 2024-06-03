@@ -7,7 +7,7 @@ import Navbar from "../components/Navbar";
 const Home: React.FC = () => {
   const location = useLocation()
   const navigate = useNavigate();
-  const [roomId, setRoomId] = useState(location?.state);
+  const [roomId, setRoomId] = useState(location?.state?location.state:"");
   const [userName, setUserName] = useState("");
   
   const createNewRoom = (e: React.MouseEvent<HTMLAnchorElement>) => {
