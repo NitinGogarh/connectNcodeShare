@@ -56,6 +56,7 @@ io.on('connection', (socket) => {
       userName,
       socketId: socket.id
     });
+    console.log(`${userName} joined room: ${roomId}`);
   });
 
   socket.on(ACTIONS.CODE_CHANGE, ({ roomId, code }) => {
@@ -69,6 +70,7 @@ io.on('connection', (socket) => {
   });
 
   socket.on('disconnecting', () => {
+    console.log(`User disconnecting: ${socket.id}`);
     const rooms = [...socket.rooms];
     rooms.forEach((roomId) => {
       socket.to(roomId).emit(ACTIONS.DISCONNECTED, {
@@ -79,6 +81,19 @@ io.on('connection', (socket) => {
       socket.leave(roomId);
     });
     delete userSocketMap[socket.id];
+  });
+
+  socket.on('disconnect', (reason) => {
+    console.log(`User disconnected: ${socket.id}, reason: ${reason}`);
+  });
+
+  // Heartbeat mechanism
+  socket.on('ping', () => {
+    console.log(`Ping received from ${socket.id}`);
+  });
+
+  socket.on('pong', () => {
+    console.log(`Pong received from ${socket.id}`);
   });
 });
 
