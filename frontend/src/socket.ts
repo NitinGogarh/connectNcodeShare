@@ -1,5 +1,5 @@
 import { io, Socket } from "socket.io-client";
-const REACT_BACKEND_URL = "http://localhost:8000/"
+const REACT_BACKEND_URL = "https://connect-n-code.vercel.app/"
 export const initSocket = async():Promise<Socket>=>{
     const options = {
         'force new connection':true,
