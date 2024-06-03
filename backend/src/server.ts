@@ -22,6 +22,9 @@ return {
 }})
 return []
 }
+app.get('/',(req,res)=>{
+  res.write("Server is running fine")
+})
 io.on('connection',(socket)=>{ 
   
     socket.on(ACTIONS.JOIN,({roomId,userName})=>{
