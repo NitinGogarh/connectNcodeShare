@@ -90,10 +90,10 @@ footer a {
   flex-direction: column;
    width: 15%;
    padding: 11px;
+   justify-content: space-between;
   position: relative;
 }
-.arrowBtn{
-  
+.arrowBtn{ 
   width: 20px;
   display: flex;
   height: 100%;
@@ -103,7 +103,9 @@ footer a {
   cursor: pointer;
 }
 .asideInner {
-  flex: 1;
+  display: flex;
+  
+  flex-direction: column;
 }
 .clientList {
   display: flex;
@@ -111,6 +113,11 @@ footer a {
   flex-wrap: wrap;
   gap: 20px;
   margin-top: 10px;
+
+}
+.buttonsGrp{
+  /* margin-bottom: 30px; */
+
 }
 .client {
   display: flex;
@@ -136,6 +143,7 @@ footer a {
 }
 .copyBtn{
   margin-bottom: 20px;
+  width: 100%;
 }
 .leaveBtn {
 
@@ -183,7 +191,7 @@ footer a {
   
 }
 .codeEditor {
-  height: 100%;
+  height:calc(100% - 50px);
   position: relative;
   display: flex;
   flex-direction: row;
@@ -221,7 +229,7 @@ footer a {
  
 }
 .inputOutput{
-   flex:1;
+   height: calc(100% - 50px);
    display: flex;
    flex-direction: column;
    margin: 3px 0px 0px 0px;

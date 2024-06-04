@@ -150,7 +150,7 @@ const EditorPage = () => {
   },[])
   const handleCopyUrl = async ()=>{
     try {
-      if (params.roomId) await navigator.clipboard.writeText(`https://codeshare-connect.vercel.app/${params?.roomId}`);
+      if (params.roomId) await navigator.clipboard.writeText(`connectncodeshare-production-cf10.up.railway.app/${params?.roomId}`);
       toast.success("Url Copied to your clipboard");
     } catch (error) {
       toast.error("Error Occured:Couldn't copied");
@@ -172,6 +172,7 @@ const EditorPage = () => {
             })}
           </div>
         </div>
+        <div className="buttonsGrp">
         <button className="btn copyBtn" onClick={handleCopyUrl}>
           Copy Url
         </button>
@@ -181,6 +182,7 @@ const EditorPage = () => {
         <button className="btn leaveBtn" onClick={handleLeave}>
           Leave
         </button>
+        </div>
       </div>
       <div className="arrowBtn">{
          isOpen ?  < KeyboardArrowLeftIcon onClick = {handleClose} style={

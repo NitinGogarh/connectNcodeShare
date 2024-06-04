@@ -23,7 +23,7 @@ const ChatBox:React.FC<Tprops> = ({socketRef,RoomId,userName}) => {
         const newBodyHeight = document.body.scrollHeight;
         setBodyWidth(newBodyWidth);
         setBodyHeight(newBodyHeight);
-        setCoordinate({ left: newBodyWidth - 58, top: newBodyHeight - 59 });
+        setCoordinate({ left: newBodyWidth - 80, top: newBodyHeight - 80 });
     };
 
     // Initial call to set the body height
