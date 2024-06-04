@@ -456,6 +456,9 @@ footer a {
   }
 } 
 @media screen and (max-width: 800px) {
+  body{
+    overflow-y: auto;
+  }
   .runCode{
    width: 60%;
   }
