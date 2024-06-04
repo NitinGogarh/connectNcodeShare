@@ -80,10 +80,10 @@ footer a {
   flex-direction: row;
   height: 100vh;
   max-width: 100vw;
-  overflow: hidden;
+overflow-x: hidden;
 }
 .aside {
-  overflow: hidden;
+ 
   background: #1c1e29;
   color: #fff;
   display: flex;
@@ -92,6 +92,7 @@ footer a {
    padding: 11px;
    justify-content: space-between;
   position: relative;
+  overflow-x: hidden;
 }
 .arrowBtn{ 
   width: 20px;
@@ -139,7 +140,7 @@ footer a {
 .editorWrap {
   background-color: #fff;
   width: 100%;
-  overflow: hidden;
+
 }
 .copyBtn{
   margin-bottom: 20px;
